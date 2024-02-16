@@ -1,6 +1,9 @@
 ---
 import '../styles/global.css';
 
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 const pageTitle = 'Gwenaël Magnenat';
 ---
 
@@ -13,18 +16,14 @@ const pageTitle = 'Gwenaël Magnenat';
 		<title>{pageTitle} | Developer</title>
 	</head>
 	<body>
-		<header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/blog">Blog</a></li>
-        </ul>
-      </nav>
-			<h1>{pageTitle}</h1>
-    </header>
+		<Header />
 		<main>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, consectetur.</p>
 		</main>
+		<Footer />
+
+		<script>
+			import '../scripts/menu.js';
+		</script>
 	</body>
 </html>
